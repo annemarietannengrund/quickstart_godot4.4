@@ -25,3 +25,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_2w1kt")
 metadata/_custom_type_script = "uid://di341opsdlvel"
+
+[node name="MainMenuScene" parent="Content" instance=ExtResource("3_qw60k")]
+layout_mode = 1

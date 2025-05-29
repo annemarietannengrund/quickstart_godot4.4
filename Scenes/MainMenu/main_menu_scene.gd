@@ -1,16 +1,16 @@
 class_name MainMenuScene extends BasicControl
 
-@onready var exit: Button = %EXIT
+@onready var quit: Button = %QUIT
 
 func _ready():
 	connection_map = [
-		[exit.pressed, exit_game]
+		[quit.pressed, quit_game]
 	]
 	connect_signals()
 	# or
 	#connect_signal()
 
-func exit_game():
+func quit_game():
 	get_tree().quit()
 	
 func _process(_delta):

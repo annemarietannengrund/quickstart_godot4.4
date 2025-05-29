@@ -5,6 +5,7 @@ enum Scene { MAIN_MENU, SCENES }
 @export var scenes_scene: PackedScene
 
 func _ready():
+	TranslationServer.set_locale('en')
 	register_scene(_gev(Scene.MAIN_MENU), main_menu)
 	register_scene(_gev(Scene.SCENES), scenes_scene)
 	connect_signal(SignalBus.change_scene, change_scene)

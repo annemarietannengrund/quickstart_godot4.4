@@ -29,3 +29,7 @@ window/stretch/aspect="expand"
 [gui]
 
 theme/custom="uid://fgjsoj684m7u"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Translations/translations.de.translation", "res://Translations/translations.en.translation")
