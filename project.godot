@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Globals="*res://autoloader/globals.gd"
 NodeHelper="*res://autoloader/node_helper.gd"
 SignalBus="*res://autoloader/signal_bus.gd"
 
