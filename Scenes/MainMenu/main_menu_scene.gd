@@ -1,6 +1,8 @@
 class_name MainMenuScene extends BasicControl
 
 @onready var quit: Button = %QUIT
+@onready var profile: Button = %PROFILE
+@onready var settings: Button = %SETTINGS
 
 func _ready():
 	connection_map = [
