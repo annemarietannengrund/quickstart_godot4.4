@@ -6,7 +6,8 @@ class_name MainMenuScene extends BasicControl
 
 func _ready():
 	connection_map = [
-		[quit.pressed, quit_game]
+		[quit.pressed, quit_game],
+		[settings.pressed, goto_app_settings]
 	]
 	connect_signals()
 	# or
@@ -14,6 +15,9 @@ func _ready():
 
 func quit_game():
 	get_tree().quit()
+
+func goto_app_settings():
+	MainSM.change_to_app_settings_scene()
 	
 func _process(_delta):
 	pass
