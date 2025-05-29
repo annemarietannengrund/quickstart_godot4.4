@@ -3,6 +3,7 @@ extends Node
 signal save_config
 signal date_changed
 signal change_scene
+signal saverloader
 
 func connect_signals(connection_map:Array) -> void:
 	for item in connection_map:
@@ -22,3 +23,4 @@ func _nevercall() -> void:
 	save_config.emit()
 	date_changed.emit()
 	change_scene.emit()
+	saverloader.emit()
