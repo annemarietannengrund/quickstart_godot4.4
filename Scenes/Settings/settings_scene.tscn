@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dix5g7kksnqb1"]
+[gd_scene load_steps=4 format=3 uid="uid://dix5g7kksnqb1"]
 
 [ext_resource type="Script" uid="uid://dthvoahc124wf" path="res://scenes/Settings/settings_scene.gd" id="1_b1m70"]
+[ext_resource type="Script" uid="uid://ccmpf311p1ia3" path="res://scenes/Settings/settings_manager.gd" id="2_mnfvd"]
 [ext_resource type="Script" uid="uid://di341opsdlvel" path="res://base_nodes/content_node.gd" id="2_ruxrw"]
 
 [node name="SettingsScene" type="Control" node_paths=PackedStringArray("content_node")]
@@ -13,6 +14,13 @@ grow_vertical = 2
 script = ExtResource("1_b1m70")
 content_node = NodePath("MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content")
 metadata/_custom_type_script = "uid://c2mx17fgkjbiq"
+
+[node name="SettingsManager" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_mnfvd")
+metadata/_custom_type_script = "uid://ccmpf311p1ia3"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -110,6 +118,8 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/LanguageOption"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "SELECT_YOUR_LANGUAGE"
+mouse_filter = 0
 text = "LANGUAGE"
 
 [node name="LanguageOptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/LanguageOption"]

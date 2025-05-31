@@ -9,15 +9,13 @@ class_name SettingsSM extends SceneManagerBase
 @onready var language_option_button: OptionButton = %LanguageOptionButton
 @onready var settings_developer_section: Control = %Settings_Developer
 
-enum Sections { GENERAL, DEVELOPER }
-var sections :Array = []
-
 func _ready():
+	TranslationServer.set_locale(Globals.language_map[App.config.active_language])
 	_setup_fields()
 	connect_signal(back.pressed, MainSM.change_to_main_menu)
 	connect_signal(settings_general_button.pressed, _menu_button_pressed.bind(settings_general_section))
 	connect_signal(settings_developer_button.pressed, _menu_button_pressed.bind(settings_developer_section))
-
+	connect_signal(language_option_button.item_selected, _language_option_selected)
 
 func _setup_fields():
 	_setup_language_settings()
@@ -34,6 +32,8 @@ func _menu_button_pressed(element: Control):
 func _setup_language_settings():
 	# Clear optionsbutton content
 	language_option_button.clear()
+	var active_language = App.config.active_language if App.config else 0
+	
 	# add options
 	for language_option in Globals.Language.keys():
 		var index = Globals.Language[language_option]
@@ -42,15 +42,12 @@ func _setup_language_settings():
 			index
 		)
 		# make current value the preselected
-		if App.config.active_language == index:
+		if active_language == index:
 			language_option_button.selected = index
-	# connect selected event to callback
-	connect_signal(language_option_button.item_selected, _language_option_selected)
 
 func _language_option_selected(selected_val: int):
 	# update the config with the selected option
-	App.config.active_language = Globals.Language[Globals.Language.find_key(selected_val)]
-	# signal for a save of the settings file
-	SignalBus.saverloader.emit(SaverLoader.Action.SAVE_SETTINGS as SaverLoader.Action)
-	# set the translation server to the new language code
-	TranslationServer.set_locale(Globals.language_map[App.config.active_language])
+	#App.config.active_language = 
+	SignalBus.change_setting.emit(SettingsManager.Setting.LANGUAGE, Globals.Language[Globals.Language.find_key(selected_val)])
+	# setup the language dropdown again, to have localized languages
+	_setup_language_settings()
