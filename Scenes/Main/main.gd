@@ -1,9 +1,10 @@
 class_name MainSM extends SceneManagerBase
 
-enum Scene { MAIN_MENU, APP_SETTINGS, APP_PROFILE }
+enum Scene { MAIN_MENU, APP_SETTINGS, APP_PROFILE, GAME_PLANNER }
 @export var main_menu: PackedScene
 @export var settings: PackedScene
 @export var profile: PackedScene
+@export var game_planner: PackedScene
 
 func _ready():
 	SignalBus.saverloader.emit(SaverLoader.Action.LOAD_SETTINGS)
@@ -12,6 +13,7 @@ func _ready():
 	register_scene(_gev(Scene.MAIN_MENU), main_menu)
 	register_scene(_gev(Scene.APP_SETTINGS), settings)
 	register_scene(_gev(Scene.APP_PROFILE), profile)
+	register_scene(_gev(Scene.GAME_PLANNER), game_planner)
 	connect_signal(SignalBus.change_scene, change_scene)
 	change_to_main_menu()
 
@@ -26,3 +28,6 @@ static func change_to_app_settings_scene():
 
 static func change_to_app_profile_scene():
 	SignalBus.change_scene.emit(MainSM._gev(Scene.APP_PROFILE))
+
+static func change_to_game_planner_scene():
+	SignalBus.change_scene.emit(MainSM._gev(Scene.GAME_PLANNER))

@@ -12,3 +12,12 @@ SELECT_YOUR_LANGUAGE,Select your Language,Wähle deine Sprache
 CURRENT,Active,Aktiv
 CHANGE,Change,Wechseln
 SLOT_NUMBER,Slot Number %s,Slot Nummer %s
+NEW_GAME,New Game,Neues Spiel
+CONTINUE_GAME,Continue Game,Spiel Fortsetzen
+PLAYER_NAME,Player Name,Spielername
+START_GAME,Start Game,Spiel Starten
+PLANET_TYPE,Planet Type,Planetentyp
+MAP_SIZE,Planet Size,Planetengröße
+PLAYER_BUDGET,Player Budget,Spieler Budget
+SLOT_ID,Slot Number,Slot Nummer
+TOTAL_TICKS,Total number of ticks,Gesamtanzahl Ticks

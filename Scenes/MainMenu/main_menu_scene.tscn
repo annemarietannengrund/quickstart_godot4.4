@@ -25,6 +25,16 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="CONTINUE_GAME" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CONTINUE_GAME"
+
+[node name="NEW_GAME" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "NEW_GAME"
+
 [node name="PROFILE" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2

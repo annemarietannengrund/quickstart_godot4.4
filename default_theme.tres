@@ -1,6 +1,9 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://fgjsoj684m7u"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://fgjsoj684m7u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bp0wp"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7bfs"]
+
 [resource]
 Button/styles/focus = SubResource("StyleBoxEmpty_bp0wp")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_e7bfs")
