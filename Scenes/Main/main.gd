@@ -7,7 +7,7 @@ enum Scene { MAIN_MENU, APP_SETTINGS }
 func _ready():
 	SignalBus.saverloader.emit(SaverLoader.Action.LOAD_SETTINGS)
 	SignalBus.saverloader.emit(SaverLoader.Action.LOAD_PROFILE)
-	TranslationServer.set_locale(Globals.language_map[Globals.Language.ENGLISH])
+	TranslationServer.set_locale(Globals.language_map[App.config.active_language])
 	register_scene(_gev(Scene.MAIN_MENU), main_menu)
 	register_scene(_gev(Scene.APP_SETTINGS), settings)
 	connect_signal(SignalBus.change_scene, change_scene)
