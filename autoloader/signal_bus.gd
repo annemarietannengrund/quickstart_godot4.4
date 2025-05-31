@@ -5,6 +5,8 @@ signal date_changed
 signal change_scene
 signal saverloader
 signal change_setting
+signal profile
+signal changed_profile
 
 func connect_signals(connection_map:Array) -> void:
 	for item in connection_map:
@@ -26,3 +28,5 @@ func _nevercall() -> void:
 	change_scene.emit()
 	saverloader.emit()
 	change_setting.emit()
+	profile.emit()
+	changed_profile.emit()

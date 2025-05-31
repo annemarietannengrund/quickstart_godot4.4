@@ -47,7 +47,6 @@ func _setup_language_settings():
 
 func _language_option_selected(selected_val: int):
 	# update the config with the selected option
-	#App.config.active_language = 
 	SignalBus.change_setting.emit(SettingsManager.Setting.LANGUAGE, Globals.Language[Globals.Language.find_key(selected_val)])
 	# setup the language dropdown again, to have localized languages
 	_setup_language_settings()

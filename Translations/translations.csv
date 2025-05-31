@@ -9,3 +9,6 @@ ENGLISH,English,Englisch
 GERMAN,German,Deutsch
 DEVELOPER,Developer,Entwickler
 SELECT_YOUR_LANGUAGE,Select your Language,Wähle deine Sprache
+CURRENT,Active,Aktiv
+CHANGE,Change,Wechseln
+SLOT_NUMBER,Slot Number %s,Slot Nummer %s

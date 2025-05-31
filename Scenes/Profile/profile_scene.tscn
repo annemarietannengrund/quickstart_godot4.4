@@ -1,0 +1,178 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5sbbpsvcunnh"]
+
+[ext_resource type="Script" uid="uid://kh8s5r7nqrwa" path="res://scenes/Profile/profile_scene.gd" id="1_qw65s"]
+[ext_resource type="Script" uid="uid://di341opsdlvel" path="res://base_nodes/content_node.gd" id="2_ohaqi"]
+[ext_resource type="Script" uid="uid://dsx1oxjqgolc2" path="res://scenes/Profile/profile_selector.gd" id="3_ohaqi"]
+[ext_resource type="PackedScene" uid="uid://d0yroqqb5k52l" path="res://scenes/Profile/profile_picker.tscn" id="4_138iy"]
+
+[node name="ProfileScene" type="Control" node_paths=PackedStringArray("content_node")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qw65s")
+content_node = NodePath("MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content")
+metadata/_custom_type_script = "uid://c2mx17fgkjbiq"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Profile" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "PROFILE"
+uppercase = true
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CURRENT" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CURRENT"
+
+[node name="CHANGE" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CHANGE"
+
+[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BACK" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "BACK"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Content" type="Control" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_ohaqi")
+flush_on_ready = false
+metadata/_custom_type_script = "uid://di341opsdlvel"
+
+[node name="Profile_Current" type="Control" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Current"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title_Current" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Current/VBoxContainer"]
+layout_mode = 2
+text = "CURRENT"
+uppercase = true
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Current/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Current/VBoxContainer"]
+layout_mode = 2
+
+[node name="SlotNameLabel" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Current/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SLOT_ID"
+
+[node name="SlotNameValue" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Current/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Current/VBoxContainer"]
+layout_mode = 2
+
+[node name="TotalTicksLabel" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Current/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TOTAL_TICKS"
+
+[node name="TotalTicksValue" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Current/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="Profile_Change" type="Control" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Change"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title_Change" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Change/VBoxContainer"]
+layout_mode = 2
+text = "CHANGE"
+uppercase = true
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Change/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ProfileSelector" type="Control" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Change/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_ohaqi")
+profile_picker_scene = ExtResource("4_138iy")
+metadata/_custom_type_script = "uid://bicwrq3mpq67u"
+
+[node name="ProfilePickers" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Profile_Change/VBoxContainer/ProfileSelector"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1

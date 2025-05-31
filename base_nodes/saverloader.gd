@@ -37,6 +37,7 @@ func _load_profile():
 	var filepath = Globals.get_profile_path_for(App.config.active_profile_id)
 	if not FileAccess.file_exists(filepath):
 		App.user_profile = ProfileData.new()
+		App.user_profile.profile_id = App.config.active_profile_id
 		_save_profile()
 	App.user_profile = ResourceLoader.load(filepath, "Settings", ResourceLoader.CACHE_MODE_IGNORE)
 

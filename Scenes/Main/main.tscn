@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://s0r52n3ii3d6"]
+[gd_scene load_steps=7 format=3 uid="uid://s0r52n3ii3d6"]
 
 [ext_resource type="Script" uid="uid://cvmunqnp1wnlm" path="res://scenes/Main/main.gd" id="1_yh5la"]
 [ext_resource type="Script" uid="uid://di341opsdlvel" path="res://base_nodes/content_node.gd" id="2_2w1kt"]
 [ext_resource type="Script" uid="uid://n5ew3ttwaca2" path="res://base_nodes/saverloader.gd" id="3_8gcrf"]
 [ext_resource type="PackedScene" uid="uid://dnk06bjh3ps5a" path="res://scenes/MainMenu/main_menu_scene.tscn" id="3_qw60k"]
+[ext_resource type="PackedScene" uid="uid://c5sbbpsvcunnh" path="res://scenes/Profile/profile_scene.tscn" id="4_nyu32"]
 [ext_resource type="PackedScene" uid="uid://dix5g7kksnqb1" path="res://scenes/Settings/settings_scene.tscn" id="5_rdp1x"]
 
 [node name="MainScene" type="Control" node_paths=PackedStringArray("content_node")]
@@ -16,6 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_yh5la")
 main_menu = ExtResource("3_qw60k")
 settings = ExtResource("5_rdp1x")
+profile = ExtResource("4_nyu32")
 content_node = NodePath("Content")
 metadata/_custom_type_script = "uid://c2mx17fgkjbiq"
 

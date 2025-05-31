@@ -3,7 +3,9 @@ class_name SettingsManager extends BasicControl
 enum Setting { LANGUAGE }
 
 func _ready():
-	handle_no_config()
+	# used for setting scene only, where app hasnt been initialised
+	if App.config is not SettingsData:
+			App.config = SettingsData.new()
 	#connection_map = []
 	connect_signal(SignalBus.change_setting, change_setting)
 	# or
@@ -17,11 +19,6 @@ func change_setting(setting_type, setting_value):
 			TranslationServer.set_locale(Globals.language_map[App.config.active_language])
 	# signal for a save of the settings file
 	SignalBus.saverloader.emit(SaverLoader.Action.SAVE_SETTINGS)
-
-func handle_no_config():
-	if App.config is SettingsData:
-		return
-	App.config = SettingsData.new()
 	
 func _process(_delta):
 	pass
