@@ -7,6 +7,7 @@ enum Scene { SOME, SCENES }
 @onready var player_name_label: Label = %PlayerNameLabel
 @onready var quit_save: Button = %QUIT_SAVE
 @onready var menu_container: VBoxContainer = %MenuContainer
+@onready var game_timer: GameTimer = %GameTimer
 
 
 func _ready():

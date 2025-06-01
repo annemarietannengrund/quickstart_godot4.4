@@ -22,6 +22,7 @@ func _save_game():
 	var savegame = Savegame.new()
 	get_tree().call_group("on_save_game", "on_save_game", savegame)
 	ResourceSaver.save(savegame, Globals.get_savegame_path_for(App.config.active_profile_id))
+	_save_profile()
 
 func _load_settings():
 	var filepath = Globals.APP_CONFIG_FILE_PATH

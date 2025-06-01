@@ -31,6 +31,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="GameTimer" type="Timer" parent="Utils" groups=["on_load_game", "on_save_game"]]
+unique_name_in_owner = true
 script = ExtResource("2_bfxw3")
 game_timer_data = SubResource("Resource_54y65")
 

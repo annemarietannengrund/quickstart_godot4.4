@@ -38,6 +38,7 @@ func _exit_tree() -> void:
 	
 func _process(delta: float) -> void:
 	game_timer_data.realtime += delta
+	App.user_profile.realtime_game_seconds += delta
 
 func on_load_game(savegame: Savegame):
 	paused = true
@@ -56,6 +57,7 @@ func on_save_game(savegame: Savegame):
 
 func _on_timeout() -> void:
 	game_timer_data.ticks += 1
+	App.user_profile.total_ticks += 1
 	SignalBus.timer_control_data.emit(self)
 
 func get_ticks() -> int:

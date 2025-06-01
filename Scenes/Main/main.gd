@@ -50,3 +50,5 @@ func change_to_new_game_scene(new_game_planner_data: GamePlanner):
 	game_node.game_planner = new_game_planner_data
 	# put game configuration here
 	content_node.add_child(game_node)
+	App.user_profile.games_started += 1
+	SignalBus.saverloader.emit(SaverLoader.Action.SAVE_PROFILE)
