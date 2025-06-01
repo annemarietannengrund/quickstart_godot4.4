@@ -21,71 +21,64 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g2r3v")
 game_planner = SubResource("Resource_opryy")
-content_node = NodePath("MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content")
+content_node = NodePath("HBoxContainer/MarginContainer/ScrollContainer/Content")
 metadata/_custom_type_script = "uid://bicwrq3mpq67u"
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="SETTINGS" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="SETTINGS" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "SETTINGS"
 uppercase = true
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="GENERAL" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="GENERAL" type="Button" parent="HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "SETTINGS_GENERAL"
 
-[node name="DEVELOPER" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="DEVELOPER" type="Button" parent="HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "DEVELOPER"
 
-[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer" type="Control" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="START_GAME" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="START_GAME" type="Button" parent="HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "START_GAME"
 
-[node name="BACK" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="BACK" type="Button" parent="HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "BACK"
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 15
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Content" type="Control" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer"]
+[node name="Content" type="Control" parent="HBoxContainer/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -93,7 +86,7 @@ script = ExtResource("2_3od5o")
 flush_on_ready = false
 metadata/_custom_type_script = "uid://di341opsdlvel"
 
-[node name="Settings_General" type="Control" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content"]
+[node name="Settings_General" type="Control" parent="HBoxContainer/MarginContainer/ScrollContainer/Content"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -102,7 +95,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -110,80 +103,81 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title_General" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
+[node name="Title_General" type="Label" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
 layout_mode = 2
 text = "SETTINGS_GENERAL"
 uppercase = true
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Options2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
+[node name="Options2" type="HBoxContainer" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options2"]
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options2"]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "SELECT_YOUR_LANGUAGE"
 mouse_filter = 0
 text = "PLANET_TYPE"
 
-[node name="PLANET_TYPE" type="OptionButton" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options2"]
+[node name="PLANET_TYPE" type="OptionButton" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="Options" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
+[node name="Options" type="HBoxContainer" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options"]
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options"]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "SELECT_YOUR_LANGUAGE"
 mouse_filter = 0
 text = "MAP_SIZE"
 
-[node name="MAP_SIZE" type="OptionButton" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options"]
+[node name="MAP_SIZE" type="OptionButton" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 item_count = 1
 popup/item_0/id = 0
 
-[node name="Options3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
+[node name="Options3" type="HBoxContainer" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options3"]
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options3"]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "SELECT_YOUR_LANGUAGE"
 mouse_filter = 0
 text = "PLAYER_NAME"
 
-[node name="PLAYER_NAME" type="LineEdit" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options3"]
+[node name="PLAYER_NAME" type="LineEdit" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options3"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 10
+placeholder_text = "CHARACTER_NAME"
 max_length = 50
 
-[node name="Options4" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
+[node name="Options4" type="HBoxContainer" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options4"]
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options4"]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "SELECT_YOUR_LANGUAGE"
 mouse_filter = 0
 text = "PLAYER_BUDGET"
 
-[node name="PLAYER_BUDGET" type="OptionButton" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options4"]
+[node name="PLAYER_BUDGET" type="OptionButton" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_General/VBoxContainer/Options4"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="Settings_Developer" type="Control" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content"]
+[node name="Settings_Developer" type="Control" parent="HBoxContainer/MarginContainer/ScrollContainer/Content"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -193,7 +187,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_Developer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_Developer"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -201,11 +195,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title_Developer" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_Developer/VBoxContainer"]
+[node name="Title_Developer" type="Label" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_Developer/VBoxContainer"]
 layout_mode = 2
 text = "DEVELOPER"
 uppercase = true
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_Developer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/MarginContainer/ScrollContainer/Content/Settings_Developer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8

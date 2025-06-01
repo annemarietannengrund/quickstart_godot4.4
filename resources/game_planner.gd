@@ -1,4 +1,4 @@
-class_name GamePlanner extends Resource
+class_name GamePlanner extends SavegameData
 
 enum PlanetType { MIXED, ROCKY, WATER, FROZEN, LAVA, DESERT }
 enum PlanetSize { SMALL, MEDIUM, NORMAL, BIG, LARGE, HUGE }

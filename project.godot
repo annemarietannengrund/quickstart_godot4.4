@@ -28,6 +28,12 @@ window/size/mode=2
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[global_group]
+
+on_save_game=""
+on_before_load_game=""
+on_load_game=""
+
 [gui]
 
 theme/custom="uid://fgjsoj684m7u"

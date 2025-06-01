@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://s0r52n3ii3d6"]
+[gd_scene load_steps=9 format=3 uid="uid://s0r52n3ii3d6"]
 
 [ext_resource type="Script" uid="uid://cvmunqnp1wnlm" path="res://scenes/Main/main.gd" id="1_yh5la"]
 [ext_resource type="Script" uid="uid://di341opsdlvel" path="res://base_nodes/content_node.gd" id="2_2w1kt"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5sbbpsvcunnh" path="res://scenes/Profile/profile_scene.tscn" id="4_nyu32"]
 [ext_resource type="PackedScene" uid="uid://dix5g7kksnqb1" path="res://scenes/Settings/settings_scene.tscn" id="5_rdp1x"]
 [ext_resource type="PackedScene" uid="uid://uge77fkf2m35" path="res://scenes/GamePlanner/game_planner_scene.tscn" id="7_5wuev"]
+[ext_resource type="PackedScene" uid="uid://d3mxasnvbeabu" path="res://scenes/Game/game.tscn" id="8_w0isb"]
 
 [node name="MainScene" type="Control" node_paths=PackedStringArray("content_node")]
 layout_mode = 3
@@ -20,7 +21,8 @@ main_menu = ExtResource("3_qw60k")
 settings = ExtResource("5_rdp1x")
 profile = ExtResource("4_nyu32")
 game_planner = ExtResource("7_5wuev")
-content_node = NodePath("Content")
+game_main_scene = ExtResource("8_w0isb")
+content_node = NodePath("MarginContainer/Content")
 metadata/_custom_type_script = "uid://c2mx17fgkjbiq"
 
 [node name="SaverLoader" type="Control" parent="."]
@@ -30,15 +32,19 @@ offset_bottom = 40.0
 script = ExtResource("3_8gcrf")
 metadata/_custom_type_script = "uid://n5ew3ttwaca2"
 
-[node name="Content" type="Control" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Content" type="Control" parent="MarginContainer"]
+layout_mode = 2
 script = ExtResource("2_2w1kt")
 metadata/_custom_type_script = "uid://di341opsdlvel"
-
-[node name="GamePlannerScene" parent="Content" instance=ExtResource("7_5wuev")]
-layout_mode = 1

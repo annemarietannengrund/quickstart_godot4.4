@@ -7,6 +7,13 @@ signal saverloader
 signal change_setting
 signal profile
 signal changed_profile
+signal new_game
+signal load_game
+signal timer_control_ready
+signal timer_control_data
+signal pause_game
+signal speed_change
+signal speed_changed
 
 func connect_signals(connection_map:Array) -> void:
 	for item in connection_map:
@@ -30,3 +37,10 @@ func _nevercall() -> void:
 	change_setting.emit()
 	profile.emit()
 	changed_profile.emit()
+	new_game.emit()
+	load_game.emit()
+	timer_control_ready.emit()
+	timer_control_data.emit()
+	pause_game.emit()
+	speed_change.emit()
+	speed_changed.emit()

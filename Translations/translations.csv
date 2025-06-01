@@ -21,3 +21,9 @@ MAP_SIZE,Planet Size,Planetengröße
 PLAYER_BUDGET,Player Budget,Spieler Budget
 SLOT_ID,Slot Number,Slot Nummer
 TOTAL_TICKS,Total number of ticks,Gesamtanzahl Ticks
+QUIT_SAVE,Save & Quit,Speichern & Beenden
+CHARACTER_NAME,Character Name,Character Name
+PAUSE,Pause,Pause
+PAUSED,Paused,Pausiert
+LOAD,Load,Laden
+SAVE,Save,Speichern

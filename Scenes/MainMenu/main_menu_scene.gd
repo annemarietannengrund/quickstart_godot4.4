@@ -11,7 +11,7 @@ func _ready():
 		[quit.pressed, get_tree().quit],
 		[settings.pressed, MainSM.change_to_app_settings_scene],
 		[profile.pressed, MainSM.change_to_app_profile_scene],
-		[continue_game.pressed, SignalBus.saverloader.emit.bind(SaverLoader.Action.LOAD_GAME)],
+		[continue_game.pressed, SignalBus.load_game.emit],
 		[new_game.pressed, MainSM.change_to_game_planner_scene]
 	]
 	if not FileAccess.file_exists(Globals.get_savegame_path_for(App.user_profile.profile_id)):
